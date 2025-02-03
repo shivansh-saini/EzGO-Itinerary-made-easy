@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+          <a href="#"><img src="images/logo1-removebg-preview.png" alt="logo" width="200px"/></a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#activites">Activities</a></li>
+            <!-- <li><a href="#contact">Contact</a></li> -->
+          </ul>
+        </nav>
+    </header>
+    <main>
+      <section class="landing-section">
+        <!-- <div class="landing-image">
+          <img src="https://e1.pxfuel.com/desktop-wallpaper/712/904/desktop-wallpaper-most-beautiful-travel-destinations-exotic-places.jpg"/>
+        </div> -->
+        <video class="video" autoplay muted loop>
+          <source src="images/pexels-ray-raimundo-5278250 (2160p).mp4" type="video/mp4"/>
+        </video>
+        <div class="landing-content">
+          <h1>EzGO</h1>
+          <p>Itinerary made easy</p>
+          <div class="middle-section">
+            <input class="search-bar-1" type="text" placeholder="From">
+            <input class="search-bar-2" type="text" placeholder="To">
+            <input class="search-bar-3" type="Date" placeholder="Date">  
+          </div>
+          <button class="btn" onclick="openPopup()">Book Now</button>       
+          
+        </div>
+      </section>
+
+      <section id="itinerary" class="itinerary" style="display:none;">
+        <h2>Your Itinerary</h2>
+        <ul id="itinerary-list"></ul>
+        <button class="back-btn" onclick="goBack()">Back</button>
+      </section>
+
+      <!-- Destinations -->
+      <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+          <div class="destination-item">
+            <img src="images/destination-1.jpg" alt="" />
+            <h3>New York City</h3>
+            <p>
+              Visit the city that never sleeps and discover its iconic
+              landmarks, world-class museums, and diverse neighborhoods.
+            </p>
+          </div>
+          <div class="destination-item">
+            <img src="images/destination-2.jpg" alt="" />
+            <h3>Paris</h3>
+            <p>
+              Experience the romance and culture of the City of Lights, from the
+              Eiffel Tower to the Louvre Museum.
+            </p>
+          </div>
+          <div class="destination-item">
+            <img src="images/destination-3.jpg" alt="" />
+            <h3>Tokyo</h3>
+            <p>
+              Explore the vibrant city of Tokyo and immerse yourself in its
+              unique blend of ancient traditions and modern technology.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="hotels" class="destinations">
+        <h2>Featured Hotels</h2>
+        <div class="destination-grid">
+          <div class="destination-item">
+            <img src="images/hotel-1.jpg" alt="" />
+            <h3>The Ritz Carlton</h3>
+            <p>
+              Experience luxury accommodations and impeccable service at The
+              Ritz Carlton, located in the heart of the city.
+            </p>
+          </div>
+          <div class="destination-item">
+            <img src="images/hotel-2.jpg" alt="" />
+            <h3>The Four Seasons</h3>
+            <p>
+              Relax in style at The Four Seasons, featuring breathtaking views,
+              an award-winning spa, and gourmet dining options.
+            </p>
+          </div>
+          <div class="destination-item">
+            <img src="images/hotel-3.jpg" alt="" />
+            <h3>The Waldorf Astoria</h3>
+            <p>
+              Indulge in luxury at The Waldorf Astoria, a historic landmark
+              hotel renowned for its elegance and sophistication.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="activites" class="destinations">
+        <h2>Featured Activities</h2>
+        <div class="destination-grid">
+          <div class="destination-item">
+            <img src="images/activity-1.jpg" alt="" />
+            <h3>The Ritz Carlton</h3>
+            <p>
+              Experience luxury accommodations and impeccable service at The
+              Ritz Carlton, located in the heart of the city.
+            </p>
+          </div>
+          <div class="destination-item">
+            <img src="images/activity-2.jpg" alt="" />
+            <h3>The Four Seasons</h3>
+            <p>
+              Relax in style at The Four Seasons, featuring breathtaking views,
+              an award-winning spa, and gourmet dining options.
+            </p>
+          </div>
+          <div class="destination-item">
+            <img src="images/activity-3.jpg" alt="" />
+            <h3>The Waldorf Astoria</h3>
+            <p>
+              Indulge in luxury at The Waldorf Astoria, a historic landmark
+              hotel renowned for its elegance and sophistication.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="booking-card" id="popup">
+        <button class="close-btn" onclick="closePopup()">X</button> <!-- Close button added -->
+        <form action="/booking" class="form-booking">
+          <label for="mode-of-transport">Mode of Transport</label>
+          <select name="transport" id="transport" class="transport-medium">
+            <option value="#" selected disabled>Select</option>
+            <option value="Plane">Plane</option>
+            <option value="Train">Train</option>
+            <option value="Bus">Bus</option>
+            <option value="Other">Other</option>
+          </select>
+          <label for="budget" class="budget">Budget (INR)</label>
+          <!-- Change input type to "range" and define min, max, and step attributes -->
+          <input type="range" id="budget" name="budget" min="0" max="1000000" step="1000">
+          <!-- Add a span element to display the current value -->
+          <span id="budgetValue" class="budgetValue">0</span>
+          <label for="hobbies">Hobby</label>
+          <input type="text" id="hobbies" name="hobbies">
+          <button class="book-btn" onclick="createItinerary()">Show Results</button> <!-- Add the button here -->
+        </form>
+      </div>
+
+      <!-- <button class="chatbot-btn">Chatbot</button> -->
+
+      <!-- <div class="chatbot-card">
+        <div id="chat-container" class="chat-container">
+          <h1>CHATBOT INPUT</h1>
+          <div id="chat-messages"></div>
+          <input type="text" id="user-input" class="user-input">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div> -->
+      
+      
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="RNyvSNe5t_1JMbW9vc7-W"
+      domain="www.chatbase.co"
+      defer>
+       </script>
+      <script src="script.js"></script>      
+    </main>
+  </body>
+  <script src="https://kit.fontawesome.com/6558443b63.js" crossorigin="anonymous"></script>
+</html>

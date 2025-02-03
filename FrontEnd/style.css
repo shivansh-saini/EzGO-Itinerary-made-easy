@@ -1,0 +1,571 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #FFF3C7;
+}
+
+@font-face {
+    font-family: "Dongle-light";
+    src: url("Dongle/Dongle-Light.ttf");
+}
+@font-face {
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-Regular.ttf");
+}
+@font-face {
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-Bold.ttf");
+}
+
+
+
+header{
+    display: flex;
+    position: absolute;
+    margin-top: 15px;
+    left: 20%;
+    border-radius: 20px;
+    width: 60%;
+    padding: 5px;
+    backdrop-filter: blur(1000px);
+    /* box-shadow: 0 0 10px rgba(0,0,0, 0.1); */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.nav-menu ul{
+ display: flex;
+}
+.nav-menu li{
+    list-style: none;
+    margin-right: 20px;
+}
+.nav-menu li:last-child{
+    margin-right: 0;
+}
+.nav-menu a{
+    text-decoration: none;
+    font-family: "Dongle-bold";
+    font-size: 2.5rem;
+    color: #333;
+    transition: all ease 0.3s;
+}
+.nav-menu a:hover{
+    color: #fff;
+    text-decoration: underline;
+    transition: ease-in 0.3s;
+}
+
+.landing-section{
+    /* position: relative; */
+    height: 600px;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+  }
+
+
+.landing-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.landing-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+.landing-content h1{
+    font-family: "Dongle-bold";
+    font-size: 8rem;
+    padding: 0;
+    margin: 0;
+}
+.landing-content p{
+    font-family: "Dongle-regular";
+    font-size: 2.5rem;
+    margin-top: -60px;
+    margin-bottom: 10px;
+}
+.landing-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff7f50;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: "Dongle-light";
+    font-size: 1.6rem;
+    transition: all ease 0.3s;
+}
+
+.landing-button:hover{
+    background-color: #333;
+}
+.destinations{
+    font-size: 2.4rem;
+    font-family: "Dongle-bold";
+    margin: 40px 80px;
+    text-align: center;
+}
+.destinations h2{
+    margin-top: 150px;
+    margin-bottom: 40px;
+}
+.destination-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.destination-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.destination-item{
+    text-align: left;
+}
+.destination-item h3{
+    font-size: 2rem;
+}
+.destination-item p{
+    font-size: 1.4rem;
+    line-height: 1;
+    font-family: "Dongle-regular";
+}
+.about{
+    text-align: center;
+    padding: 100px;
+}
+.about h3{
+   font-family: "Dongle-bold";
+   font-size: 3rem;
+}
+.about p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+.team-members{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team-member img{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    object-fit: cover;
+}
+.team-member h4{
+    font-family: "Dongle-bold";
+    font-size: 2rem;
+}
+.contact{
+    padding: 80px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+.contact h3{
+    font-family: "Dongle-bold";
+    font-size: 3rem;
+}
+.contact-info p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.contact-info ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+} 
+.contact-info li{
+    margin: 0 20px;
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+  
+}
+.contact-info li a{
+    text-decoration: none;
+    font-family: "Dongle-regular";
+    color: black;
+}
+.contact-info i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+.form{
+    width: 100%;
+}
+input,textarea{
+    width: 70%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.1);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-family: "Dongle-regular";
+}
+textarea{
+    height: 200px;
+}
+.form button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff7f50;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: "Dongle-light";
+    font-size: 1.6rem;
+    border: none;
+    transition: all ease 0.3s;
+}
+.form button:hover{
+    background-color: #333;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.social-icons a{
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+}
+footer p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+}
+
+
+.logo {
+    margin-left: 20px; /* Adjust margin as needed */
+    width: 30%; /* Adjust width as needed */
+    height: 1%; /* Adjust height as needed */
+    object-fit: contain;
+}
+
+.logo img {
+    width: 80%; /* Make sure the image fills the container */
+    height: 1%; /* Make sure the image fills the container */
+    object-fit: contain; /* Maintain aspect ratio and fit inside the container */
+}
+@media (max-width: 1177px) {
+    .landing-content h1{
+        line-height: 0.7;
+    }
+    .landing-content p{
+        margin-top: 0;
+        line-height: 0.8;
+    }
+    .destinations img{
+        height: 250px;
+    }
+    input, textarea{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .landing-content h1{
+        margin-bottom: 5px;
+    }
+    .team-member img{
+        width: 200px;
+        height: 200px;
+    }
+    .destination-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+}
+@media (max-width:603px){
+    .landing-content h1{
+        font-size: 2rem;
+    }
+    .landing-content p{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:430px){
+    header{
+        display: none;
+    }
+    .landing-content h1{
+        font-size: 1.3rem;
+    }
+    .landing-content p{
+        font-size: 1rem;
+    }
+    .landing-button{
+        padding: 6px 22px;
+        font-size: 16px;
+    }
+    .destinations{
+        font-size: 1.5rem;
+    }
+    .destination-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+    .about{
+        padding: 0 30px;
+    }
+    .team-member img{
+        width: 250px;
+        height: 250px;
+    }
+}
+  
+/* SEARCH BAR CSS */
+
+.middle-section{
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.search-bar-1{
+    width: 20%;
+    font-size: 26px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.search-bar-2{
+    width: 20%;
+    font-size: 26px;
+}
+.search-bar-3{
+    width: 20%;
+    font-size: 26px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+}
+
+.landing-content .btn{
+    height: 50px;
+    width: 20%;
+    font-size: 18px;
+    padding: 0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.landing-content .btn:hover{
+    background-color: #ff7f50;
+    color: #fff;
+    transition: ease-in 0.2s;
+}
+
+/* CARD CSS */
+
+.booking-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faa974;
+    /* backdrop-filter: blur(1000px); */
+    color: #000;
+    font-family: "Dongle-bold";
+    margin: 10px 0px;
+    width: 35%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    transition: ease-in 0.5s;
+    visibility: hidden;
+}
+
+.booking-card:hover{
+    box-shadow: 15px 15px 10px #000;
+    transition: ease-out 0.5s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 20%;
+}
+
+.form-booking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.form-booking label{
+    font-size: 36px;
+    margin: 0px;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.form-booking label:nth-of-type(1){
+    margin-top: 30px;
+}
+
+.form-booking input{
+    height: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    /* padding-left: 20px; */
+    font-size: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-booking select{
+    margin: 10px 20px;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.form-booking .book-btn{
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.form-booking .book-btn:hover{
+    background-color: #7F50FF;
+    color: #fff;
+    transition: ease-out 0.3s;
+}
+
+/* Track styles */
+  
+  /* Thumb styles */
+.booking-card input[type="range"]::-webkit-slider-thumb {
+    backdrop-filter: blur(1000px); /* Set thumb color */
+}
+  
+  /* Fill styles (for browsers that support it, like Firefox) */
+  .booking-card input[type="range"]::-moz-range-progress {
+    backdrop-filter: blur(1000px); backdrop-filter: blur(1000px); /* Set fill color */
+}
+  
+  /* Fill styles (for browsers that support it, like Edge) */
+  .booking-card input[type="range"]::-ms-fill-lower {
+     backdrop-filter: blur(1000px); /* Set fill color */
+}
+  
+
+.budgetValue{
+    font-size: 24px;
+}
+/* Close button styles */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .close-btn:hover {
+    color: #7F50FF;
+  }
+
+
+/* CHATBOX */
+
+.chatbot-btn{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    padding: 20px 10px;
+    border-radius: 100%;
+    background-color: #7F50FF;
+    color: #fff;
+}
+
+.chatbot-btn:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.chatbot-card{
+    width: 400px;
+}
+
+.chat-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.chat-container input{
+    width: 80%;
+}
+
+.chat-container button{
+    height: 50px;
+    width: 150px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #faa974;
+    border-radius: 15px;
+}
+
+.chat-container button:hover{
+    background-color: #7F50FF;
+    color: #fff;
+}
